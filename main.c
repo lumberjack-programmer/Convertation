@@ -85,7 +85,7 @@ char *tens_power[] = {"sto", "dwieście", "trzysta", "czterysta", "pięćset", "
            } else {
              printf("%s \n", single_digits_million[million - 1]);
            }
-    
+
         }
 
     }
@@ -95,7 +95,7 @@ char *tens_power[] = {"sto", "dwieście", "trzysta", "czterysta", "pięćset", "
         int d_m = thouthand/100;
         if (thouthand%100 == 00){
         printf("%s tysięcy ", tens_power[d_m - 1]);
-        } else if (thouthand/10 == 00){                    
+        } else if (thouthand/10 == 00){
             printf("%s ", single_digits_thousand[thouthand%10 - 1 ]);
         } else if (thouthand%100/10 == 0) {
             printf("%s ", tens_power[d_m - 1]);
@@ -124,7 +124,7 @@ char *tens_power[] = {"sto", "dwieście", "trzysta", "czterysta", "pięćset", "
 
         }else if (len_thouthand == 1){
             if (hundred != 0){
-           printf("%s ", single_digits_thousand[thouthand - 1]);  
+           printf("%s ", single_digits_thousand[thouthand - 1]);
             } else {
             printf("%s \n", single_digits_thousand[thouthand - 1]);
             }
@@ -140,8 +140,8 @@ char *tens_power[] = {"sto", "dwieście", "trzysta", "czterysta", "pięćset", "
         int d_m = hundred/100;
         if (hundred%100 == 00){
         printf("%s ", tens_power[d_m - 1]);
-        } else if (thouthand/10 == 00){                     
-            printf("%s ", single_digits_thousand[thouthand%10 - 1 ]);
+        } else if (hundred/10 == 00){
+            printf("%s ", single_digits_thousand[hundred%10 - 1 ]);
         } else if (hundred%100/10 == 0) {
             printf("%s ", tens_power[d_m - 1]);
             printf("%s ", single_digits[hundred%10 - 1]);
@@ -157,7 +157,7 @@ char *tens_power[] = {"sto", "dwieście", "trzysta", "czterysta", "pięćset", "
         printf("%s ", tens_multiple[hundred%100/10 ]);
             printf("%s \n", single_digits[hundred%10 - 1 ]); //the last \n
         }
-		
+
         }else if (len_hundred == 2){
 
            if (hundred%10 == 0){
